@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.GoOutFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/lay_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/home_more_restarent_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:padding="@dimen/xxhdpi_20"
+                    android:paddingStart="5dp"
+                    android:text="@string/more_restaurants_near_you"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_16" />
+
+                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                    android:id="@+id/home_restarent_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_more_restarent_txt"
+                    android:layout_marginStart="@dimen/xxhdpi_5"
+                    android:layout_marginEnd="@dimen/xxhdpi_5"
+                    app:shimmer_demo_child_count="1"
+                    app:shimmer_demo_layout="@layout/demo_near_rest_recycler"
+                    app:shimmer_demo_layout_manager_type="linear_vertical"
+                    app:shimmer_demo_shimmer_color="@color/colorShim" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_no_service"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    app:srcCompat="@drawable/ic_no_service" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:text="@string/no_service_head"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/t_xxh_22" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/xxhdpi_30"
+                    android:layout_marginEnd="@dimen/xxhdpi_30"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/no_service_desc"
+                    android:textAlignment="center"
+                    android:textColor="@color/pale_grey"
+                    android:textSize="@dimen/t_xxh_16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

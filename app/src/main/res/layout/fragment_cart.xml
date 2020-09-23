@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.CartFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/dummyLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/cooking" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:text="Good Food is always cooking"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_xxh_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/xxhdpi_30"
+            android:layout_marginRight="@dimen/xxhdpi_30"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Your Cart is empty, Add something from the menu" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/topLay"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="YOUR CART"
+            android:textSize="@dimen/t_xxh_18"
+            android:layout_marginStart="@dimen/xxhdpi_20"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:textColor="@color/black" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Discard"
+            android:textAlignment="viewEnd"
+            android:visibility="gone"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLay"
+        android:layout_marginTop="10dp"
+        app:shimmer_demo_child_count="2"
+        app:shimmer_demo_shimmer_color="@color/colorShim"
+        app:shimmer_demo_layout="@layout/demo_near_rest_recycler"
+        app:shimmer_demo_layout_manager_type="linear_vertical"/>
+
+</RelativeLayout>

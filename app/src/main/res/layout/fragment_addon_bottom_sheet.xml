@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lay_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/txt_apply_addon"
+            android:layout_margin="@dimen/xxhdpi_10"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:paddingTop="@dimen/xxhdpi_10"
+                android:paddingBottom="@dimen/xxhdpi_10"
+                android:text="Size"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_addon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/txt_apply_addon"
+            android:layout_margin="@dimen/xxhdpi_10"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:paddingTop="@dimen/xxhdpi_10"
+                android:paddingBottom="@dimen/xxhdpi_10"
+                android:text="Add-On"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_addon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_apply_addon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_green_rect"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:padding="15dp"
+            android:text="Apply"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_xxh_16" />
+    </LinearLayout>
+</ScrollView>

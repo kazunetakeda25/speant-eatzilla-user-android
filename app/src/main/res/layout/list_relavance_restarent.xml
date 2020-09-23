@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/xxhdpi_5"
+    android:background="@drawable/br_grey_border"
+    android:layout_margin="@dimen/xxhdpi_5">
+
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/resta_list_rel"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/resta_list_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:background="@color/white"
+                android:src="@drawable/slide1" />
+
+            <com.like.LikeButton
+                android:id="@+id/hotel_like_img"
+                android:layout_width="@dimen/xxhdpi_40"
+                android:layout_height="@dimen/xxhdpi_40"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:visibility="gone"
+                android:background="@drawable/round_shadow"
+                app:circle_end_color="@color/colorAccent"
+                app:circle_start_color="@color/colorPrimary"
+                app:dots_primary_color="@color/colorAccent"
+                app:dots_secondary_color="@color/colorPrimary"
+                app:icon_size="15dp"
+                app:icon_type="heart"
+                app:like_drawable="@drawable/ic_like"
+                app:unlike_drawable="@drawable/ic_unlike" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resta_list_rel"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:visibility="invisible"
+                android:background="@color/lit_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+
+                <LinearLayout
+                    android:id="@+id/hotel_detail_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/hotel_detail_hotel_name_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="The Punjab Express"
+                        android:minLines="2"
+                        android:textColor="@color/txt_color"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/t_xxh_14" />
+
+                    <TextView
+                        android:id="@+id/hotel_detail_hotel_type_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="North Indian • South Indian"
+                        android:textAlignment="center"
+                        android:maxLines="1"
+                        android:layout_marginTop="@dimen/xxhdpi_5"
+                        android:textSize="@dimen/t_xxh_12" />
+
+                    <TextView
+                        android:id="@+id/hotel_detail_rating_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_star_green_24dp"
+                        android:drawablePadding="1dp"
+                        android:text="3.5"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:layout_marginTop="@dimen/xxhdpi_10"
+                        android:textSize="@dimen/t_xxh_14" />
+
+
+                    <TextView
+                        android:id="@+id/hotel_detail_hotel_discount_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="15% Discount on Chicken Item"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="gone"
+                        android:textSize="@dimen/t_xxh_10" />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/hotel_detail_time_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="15-25 mins"
+                            android:textAlignment="center"
+                            android:visibility="invisible"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/t_xxh_12" />
+
+                        <TextView
+                            android:id="@+id/hotel_detail_amt_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textAlignment="center"
+                            android:text="500 For Two"
+                            android:visibility="gone"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/t_xxh_12" />
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

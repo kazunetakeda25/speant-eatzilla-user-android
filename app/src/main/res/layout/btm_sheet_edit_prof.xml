@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/edit_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dim"
+        android:visibility="gone"
+        android:layout_above="@id/edit_linear"/>
+
+    <LinearLayout
+        android:id="@+id/edit_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/edit_prof_change_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="Change Photo"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/edit_prof_delet_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="Delete Photo"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/edit_prof_cancel_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="Cancel"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.DiningTrackActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/Toolbar2Theme"
+        app:titleTextAppearance="@style/ToolbarTitle2Theme" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/xxhdpi_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_rest"
+                    android:layout_width="@dimen/xxhdpi_100"
+                    android:layout_height="@dimen/xxhdpi_100"
+                    android:layout_marginEnd="@dimen/xxhdpi_10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_restName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="Restaurant Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_20" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/rest_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="Restaurant Name"
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/t_xxh_16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/xxhdpi_10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/xxhdpi_10"
+                        android:src="@drawable/success"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/booking_request_sent"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_16" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="@dimen/xxhdpi_30"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorAccent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_process"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/xxhdpi_10"
+                        android:src="@drawable/stopwatch"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_book_stat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="Processing Request"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_16" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_book_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Date"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_14" />
+
+            </LinearLayout>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="@string/booking_details"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/xxhdpi_20"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/date"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Date"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/guest"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_guests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Date"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Date"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/phone_number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_phonenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Date"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_16" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btn_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_cancelled"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:padding="@dimen/xxhdpi_10"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/sourcesanspro_semibold"/>
+
+            </LinearLayout>
+
+            <!-- <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/light_grey" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_30"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="@string/restaurant_details"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/xxhdpi_20"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_16" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Date"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_14" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:background="@color/grey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/call"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/xxhdpi_20" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/xxhdpi_30"
+                android:background="@color/grey" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

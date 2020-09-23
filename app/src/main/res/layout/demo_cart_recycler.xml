@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="@dimen/xxhdpi_10">
+
+    <ImageView
+        android:id="@+id/list_cart_hotel_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:alpha="0.1"
+        android:background="@android:color/background_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/xxhdpi_10"
+        android:layout_toEndOf="@id/list_cart_hotel_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/list_cart_hotel_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.1"
+            android:background="@android:color/background_dark"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/t_xxh_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/list_cart_hotel_loc_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:alpha="0.1"
+            android:background="@android:color/background_dark"
+            android:textSize="@dimen/t_xxh_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:layout_marginBottom="@dimen/xxhdpi_10"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.1"
+                    android:background="@android:color/background_dark"
+                    android:layout_marginRight="@dimen/xxhdpi_20"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <TextView
+                    android:id="@+id/list_cart_items_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.1"
+                    android:background="@android:color/background_dark"
+                    android:textColor="@color/txt_color"
+                    android:layout_marginRight="@dimen/xxhdpi_40"
+                    android:textSize="@dimen/t_xxh_12"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:layout_marginTop="@dimen/xxhdpi_5"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.1"
+                    android:background="@android:color/background_dark"
+                    android:layout_marginRight="@dimen/xxhdpi_20"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <TextView
+                    android:id="@+id/list_cart_total_amt_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.1"
+                    android:background="@android:color/background_dark"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_12"
+                    android:layout_marginRight="@dimen/xxhdpi_40"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:layout_marginTop="@dimen/xxhdpi_5"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

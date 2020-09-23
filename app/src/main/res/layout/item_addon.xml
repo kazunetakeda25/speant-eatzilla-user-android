@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:padding="@dimen/xxhdpi_5"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_addon_name"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:layout_toStartOf="@id/txt_addon_price"
+        android:layout_marginStart="@dimen/xxhdpi_40"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/t_xxh_18"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_addon_price"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/t_xxh_18"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chk_addon"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

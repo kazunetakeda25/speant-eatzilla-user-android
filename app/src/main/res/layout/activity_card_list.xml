@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.CardListActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:theme="@style/ToolbarStyleWhite"
+            app:titleTextAppearance="@style/ToolbarTitleAppearance" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.speant.user.Common.customViews.CustomText.CustomRegularTextView
+        android:id="@+id/mTxtAddCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/xxhdpi_20"
+        android:drawableStart="@drawable/ic_add_green"
+        android:padding="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/add_card"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:background="@color/grey" />
+
+    <!--<boxfoodd.user.Common.customViews.CustomText.CustomRegularTextView
+        android:id="@+id/mTxtPayWithCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/xxhdpi_20"
+        android:drawableStart="@drawable/ic_dollar"
+        android:padding="15dp"
+        android:text="@string/cash_money"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp" />-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cardlist_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

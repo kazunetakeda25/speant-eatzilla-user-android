@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/xxhdpi_10"
+    android:paddingBottom="@dimen/xxhdpi_10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/address_type_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            android:layout_margin="@dimen/xxhdpi_10"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/address_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/address_type_img"
+            android:layout_toStartOf="@id/img_delete"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/xxhdpi_10"
+            android:paddingStart="@dimen/xxhdpi_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/address_type_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="@dimen/t_xxh_16"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/address_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:textSize="@dimen/t_xxh_14"
+                android:text="39, Opposite to childeren park, Dhanala....." />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="@dimen/xxhdpi_30"
+            android:layout_height="@dimen/xxhdpi_30"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/xxhdpi_5"
+            android:src="@drawable/ic_delete"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_rest_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/xxhdpi_10"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textAllCaps="true"
+        android:textSize="@dimen/t_xxh_14"/>
+
+    <RatingBar
+        android:id="@+id/rate_rest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/RatingBars"
+        android:numStars="5"
+        android:scaleX="0.6"
+        android:scaleY="0.6" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_suggest_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxhdpi_10"
+        android:layout_marginTop="@dimen/xxhdpi_10"
+        android:layout_marginBottom="@dimen/xxhdpi_20"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/t_xxh_14"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_rest_suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/xxhdpi_10"
+        android:background="@drawable/black_border"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:hint="Got any other Suggestions? Let us Know...."
+        android:padding="@dimen/xxhdpi_10" />
+
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey" />-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_delivery_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxhdpi_10"
+        android:layout_marginEnd="@dimen/xxhdpi_10"
+        android:layout_marginBottom="@dimen/xxhdpi_10"
+        android:layout_marginTop="@dimen/xxhdpi_20"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/t_xxh_14"/>
+
+    <RatingBar
+        android:id="@+id/rate_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/RatingBars"
+        android:numStars="5"
+        android:scaleX="0.6"
+        android:scaleY="0.6" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@color/colorAccent"
+        android:text="Confirm Rating"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:textSize="@dimen/t_xxh_18"
+        android:layout_margin="@dimen/xxhdpi_20" />
+
+
+</LinearLayout>

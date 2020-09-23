@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxhdpi_20"
+        android:padding="@dimen/xxhdpi_5">
+
+        <ImageView
+            android:id="@+id/refer_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/xxhdpi_10"
+            android:paddingLeft="5dp"
+            android:paddingTop="@dimen/xxhdpi_10"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/xxhdpi_10"
+            android:text="Referrals"
+            android:textColor="@color/black"
+            android:textSize="@dimen/xxhdpi_20"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/xxhdpi_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/invite_btn"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/referal_img" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="@dimen/t_xxh_20"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="REFERRALS"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:gravity="center"
+                android:paddingLeft="@dimen/xxhdpi_5"
+                android:paddingRight="@dimen/xxhdpi_5"
+                android:lineSpacingExtra="@dimen/xxhdpi_5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_16"
+                android:text="@string/referal_txt"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/invite_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_rect"
+            android:textColor="@color/white"
+            android:text="Invite and Earn"
+            android:layout_marginLeft="@dimen/xxhdpi_5"
+            android:layout_marginRight="@dimen/xxhdpi_5"
+            android:layout_marginBottom="@dimen/xxhdpi_5"
+            android:textSize="@dimen/t_xxh_18"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

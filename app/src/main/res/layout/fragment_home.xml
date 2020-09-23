@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".ui.fragment.HomeFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:context=".ui.HomeActivity">
+
+        <RelativeLayout
+            android:id="@+id/lay_loc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/xxhdpi_5">
+
+            <ImageView
+                android:id="@+id/filter_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:padding="@dimen/xxhdpi_10"
+                android:src="@drawable/ic_filter" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/xxhdpi_10"
+                android:layout_marginRight="@dimen/xxhdpi_10"
+                android:layout_toLeftOf="@id/filter_img"
+                android:orientation="vertical"
+                android:padding="@dimen/xxhdpi_5">
+
+                <TextView
+                    android:id="@+id/home_delivery_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:drawablePadding="@dimen/xxhdpi_10"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Delivering Food to"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <TextView
+                    android:id="@+id/home_delivery_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sourcesanspro_light"
+                    android:maxLines="1"
+                    android:hint="@string/fetching_adddress"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/t_xxh_14" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_loc">
+
+            <LinearLayout
+                android:id="@+id/lay_frag_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lay_restaurant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xxhdpi_20"
+                        android:layout_marginEnd="@dimen/xxhdpi_5">
+
+
+                        <!--<android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycle_home_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />-->
+
+                        <!-- <com.yarolegovich.discretescrollview.DiscreteScrollView
+                             android:id="@+id/item_picker"
+                             android:layout_width="match_parent"
+                             android:visibility="gone"
+                             android:layout_height="wrap_content"/>-->
+
+                        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                            android:id="@+id/ad_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:shimmer_demo_child_count="10"
+                            app:shimmer_demo_layout="@layout/demo_ad_recycler"
+                            app:shimmer_demo_layout_manager_type="linear_horizontal"
+                            app:shimmer_demo_shimmer_color="@color/colorShim" />
+
+                        <LinearLayout
+                            android:id="@+id/image_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#00000000"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/xxhdpi_10"
+                        android:visibility="visible"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_marginStart="@dimen/xxhdpi_20"
+                            android:layout_marginEnd="@dimen/xxhdpi_20"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/black"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/xxhdpi_20">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/home_undr_min_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sourcesanspro_regular"
+                                    android:text="@string/nearby_restaurants"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/t_xxh_16" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/xxhdpi_5"
+                                    android:text="Restaurant near your Location"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/t_xxh_14" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/home_relevence_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="2dp"
+                                android:drawableEnd="@drawable/ic_down_arrow"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/sourcesanspro_regular"
+                                android:gravity="center"
+                                android:text="@string/relevance"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/t_xxh_12"
+                                android:visibility="invisible" />
+
+                        </RelativeLayout>
+
+                        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                            android:id="@+id/home_relevence_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:shimmer_demo_child_count="1"
+                            app:shimmer_demo_layout="@layout/demo_near_rest_recycler"
+                            app:shimmer_demo_layout_manager_type="linear_horizontal"
+                            app:shimmer_demo_shimmer_color="@color/colorWhite" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_marginStart="@dimen/xxhdpi_20"
+                            android:layout_marginEnd="@dimen/xxhdpi_20"
+                            android:background="@color/black"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_special"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/xxhdpi_5">
+
+                        <TextView
+                            android:id="@+id/txt_trend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:padding="@dimen/xxhdpi_20"
+                            android:text="@string/today_special"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_xxh_16" />
+
+                        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                            android:id="@+id/home_trend_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/xxhdpi_5"
+                            android:layout_marginBottom="@dimen/xxhdpi_5"
+                            app:shimmer_demo_child_count="1"
+                            android:layout_below="@id/txt_trend"
+                            app:shimmer_demo_layout="@layout/demo_near_rest_recycler"
+                            app:shimmer_demo_layout_manager_type="linear_horizontal"
+                            app:shimmer_demo_shimmer_color="@color/colorShim" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_popular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xxhdpi_5">
+
+                        <TextView
+                            android:id="@+id/txt_popular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:padding="@dimen/xxhdpi_20"
+                            android:text="@string/popular_brands"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_xxh_16" />
+
+                        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                            android:id="@+id/home_popular_brands_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/xxhdpi_5"
+                            android:layout_marginBottom="@dimen/xxhdpi_5"
+                            app:shimmer_demo_child_count="1"
+                            android:layout_below="@id/txt_popular"
+                            app:shimmer_demo_layout="@layout/demo_near_rest_recycler"
+                            app:shimmer_demo_layout_manager_type="linear_horizontal"
+                            app:shimmer_demo_shimmer_color="@color/colorShim" />
+
+                    </RelativeLayout>
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xxhdpi_10"
+                        android:padding="@dimen/xxhdpi_20">
+
+                        <TextView
+                            android:id="@+id/home_more_restarent_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:paddingLeft="5dp"
+                            android:text="@string/more_restaurants_near_you"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_xxh_16" />
+
+
+                    </RelativeLayout>
+
+
+                    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                        android:id="@+id/home_restarent_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/xxhdpi_5"
+                        android:layout_marginEnd="@dimen/xxhdpi_5"
+                        app:shimmer_demo_child_count="1"
+                        app:shimmer_demo_layout="@layout/demo_near_rest_recycler"
+                        app:shimmer_demo_layout_manager_type="linear_vertical"
+                        app:shimmer_demo_shimmer_color="@color/colorShim" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/xxhdpi_100" />
+
+                <LinearLayout
+                    android:id="@+id/lay_no_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/xxhdpi_10"
+                        app:srcCompat="@drawable/ic_no_service" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/xxhdpi_10"
+                        android:text="@string/no_service_head"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/t_xxh_22" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/xxhdpi_30"
+                        android:layout_marginEnd="@dimen/xxhdpi_30"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/no_service_desc"
+                        android:textAlignment="center"
+                        android:textColor="@color/pale_grey"
+                        android:textSize="@dimen/t_xxh_16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/lay_order_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="@dimen/xxhdpi_5"
+            android:background="@color/colorAccent"
+            android:visibility="gone">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/order_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_50" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/order_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/xxhdpi_10"
+                app:ci_drawable="@drawable/white_circle"
+                app:ci_drawable_unselected="@drawable/grey_circle"
+                app:ci_height="4dp"
+                app:ci_width="8dp" />
+
+        </LinearLayout>
+
+        <!--<RelativeLayout
+            android:id="@+id/home_notify_delivery_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@color/colorAccent"
+                android:fastScrollEnabled="true"
+                android:padding="5dp"
+                card_view:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/xxhdpi_5"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xxhdpi_10"
+                        android:layout_toLeftOf="@id/track_order_txt"
+                        android:layout_weight=".8"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            &lt;!&ndash;<View
+                                android:layout_width="1dp"
+                                android:layout_height="15sp"
+                                android:background="@color/white"/>&ndash;&gt;
+                            <TextView
+                                android:id="@+id/home_notify_hotel_name_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/xxhdpi_5"
+                                android:fontFamily="@font/sourcesanspro_regular"
+                                android:text="The Punjab Express"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/t_xxh_12" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center|start"
+                            android:orientation="horizontal">
+
+                            &lt;!&ndash;<View
+                                android:layout_width="1dp"
+                                android:layout_height="15sp"
+                                android:background="@color/white"/>&ndash;&gt;
+                            <TextView
+                                android:id="@+id/home_notify_time_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/xxhdpi_5"
+                                android:text="11:06 PM"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/t_xxh_12" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="15sp"
+                                android:layout_marginLeft="@dimen/xxhdpi_5"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/home_notify_item_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/xxhdpi_5"
+                                android:text="1 Item"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/t_xxh_12" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="15sp"
+                                android:layout_marginLeft="@dimen/xxhdpi_5"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/home_notify_amount_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/xxhdpi_5"
+                                android:text="$ 421.00"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/t_xxh_12" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/track_order_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/xxhdpi_10"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="Track Order"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/t_xxh_12" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>-->
+
+        <!--<RelativeLayout
+            android:id="@+id/home_notify_rating_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/xxhdpi_10"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:fastScrollEnabled="true"
+                card_view:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:padding="@dimen/xxhdpi_5">
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/notify_rating"
+                        style="@style/RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:isIndicator="true"
+                        android:numStars="5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/xxhdpi_5"
+                        android:layout_toLeftOf="@id/notify_rating"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rate your Food"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/t_xxh_14" />
+
+                        <TextView
+                            android:id="@+id/notify_home_rate_hotel_name_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The Punjab Express"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/t_xxh_16" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+
+</FrameLayout>

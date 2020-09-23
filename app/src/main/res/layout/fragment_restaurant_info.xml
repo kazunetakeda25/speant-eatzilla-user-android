@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".ui.fragment.RestaurantInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxhdpi_10"
+        android:layout_marginEnd="@dimen/xxhdpi_10"
+        android:layout_marginTop="@dimen/xxhdpi_20"
+        android:layout_marginBottom="@dimen/xxhdpi_10"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_rest"
+            android:layout_width="@dimen/xxhdpi_100"
+            android:layout_height="@dimen/xxhdpi_100"
+            android:layout_marginEnd="@dimen/xxhdpi_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_restName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="Restaurant Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_20" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="Restaurant Name"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/t_xxh_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/xxhdpi_10"
+        android:layout_marginTop="@dimen/xxhdpi_10"
+        android:layout_marginEnd="@dimen/xxhdpi_10"
+        android:visibility="gone"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/xxhdpi_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="Restaurant Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rest_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="Restaurant Name"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="Shop Description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_shop_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="Restaurant Name"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="FSSAI License"
+                android:padding="@dimen/xxhdpi_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="Restaurant Name"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="Rating"
+                android:padding="@dimen/xxhdpi_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <RatingBar
+                android:id="@+id/rate_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/RatingBarsDark"
+                android:isIndicator="true"
+                android:scaleX="0.6"
+                android:scaleY="0.6" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

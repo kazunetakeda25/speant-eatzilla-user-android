@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
+    tools:context=".ui.AddPaymentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:theme="@style/ToolbarStyle"
+            app:subtitleTextColor="@color/black"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/ToolbarTitle"
+            app:titleTextColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_food_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:alpha=".87"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="Food Credits"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/t_xxh_18" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/grey_bg_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/t_xxh_15">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="0.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_recharge_wal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/recharge_wallet"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_xxh_12" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/xxhdpi_50"
+            android:layout_marginBottom="15dp"
+            android:alpha=".87"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="Wallets"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/t_xxh_18" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="@dimen/xxhdpi_5"
+            android:background="@drawable/grey_bg_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/t_xxh_15">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_paytm"
+                android:drawablePadding="@dimen/xxhdpi_5"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="Paytm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_paytm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="1.25"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_xxh_12" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="@dimen/xxhdpi_5"
+            android:background="@drawable/grey_bg_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/t_xxh_15">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_free_charge"
+                android:drawablePadding="@dimen/xxhdpi_5"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="FreeCharge"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_free_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/link_account"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_xxh_12" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="@dimen/xxhdpi_5"
+            android:background="@drawable/grey_bg_rect"
+            android:orientation="horizontal"
+            android:padding="@dimen/t_xxh_15">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_phonepe"
+                android:drawablePadding="@dimen/xxhdpi_5"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="PhonePe"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_18" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_phonepe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/link_account"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_xxh_12" />
+
+        </RelativeLayout>
+
+        <!-- <android.support.design.widget.FloatingActionButton
+             android:id="@+id/bn_add_card"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentBottom="true"
+             android:layout_gravity="center"
+             android:layout_marginTop="5dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginBottom="10dp"
+             app:backgroundTint="@color/colorAccent"
+             app:fabSize="normal"
+             app:srcCompat="@drawable/ic_card" />-->
+
+
+    </LinearLayout>
+
+</ScrollView>

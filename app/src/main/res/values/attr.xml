@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="app">
+        <attr name="customFont" format="string" />
+        <attr name="posX" format="integer"></attr>
+        <attr name="posY" format="integer"></attr>
+    </declare-styleable>
+    <declare-styleable name="AnalogClock">
+        <attr name="dial" format="reference"/>
+        <attr name="hand_hour" format="reference"/>
+        <attr name="hand_minute" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="timeline_style" >
+        <attr name="marker" format="color|reference"/>
+        <attr name="line" format="color|reference"/>
+        <attr name="markerSize" format="dimension"/>
+        <attr name="lineSize" format="dimension"/>
+        <attr name="lineOrientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="linePadding" format="dimension"/>
+        <attr name="markerInCenter" format="boolean"/>
+    </declare-styleable>
+</resources>
+

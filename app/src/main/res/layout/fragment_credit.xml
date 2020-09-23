@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CreditFragment">
+
+    <LinearLayout
+        android:id="@+id/lay_credit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/myviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="40dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_credit_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_primary"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="Credit Value $ 0.0"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_xxh_18"
+            android:textAlignment="center"
+            android:layout_margin="@dimen/xxhdpi_20"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_credit_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/credit_status"
+            android:padding="@dimen/xxhdpi_10"
+            android:textAlignment="center"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:layout_margin="@dimen/xxhdpi_10"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_change_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/update_account"
+            android:textColor="@color/colorPrimary"
+            android:padding="@dimen/xxhdpi_10"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:layout_margin="@dimen/xxhdpi_20"/>
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

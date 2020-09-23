@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ui.LoginConfirmActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize" />
+
+        <LinearLayout
+            android:id="@+id/lay_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="@dimen/xxhdpi_20"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="@string/enter_your_mobile_number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_22" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:background="@drawable/black_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_showFlag="true"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textSize="14sp"
+                    card_view:ccp_defaultPhoneCode="91" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/xxhdpi_5"
+                    android:layout_marginBottom="@dimen/xxhdpi_5"
+                    android:background="@color/grey" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/sourcesanspro_light"
+                    android:hint="@string/enter_mobile_number"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:padding="@dimen/xxhdpi_10"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_mobile"
+            android:layout_margin="@dimen/xxhdpi_20"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="@string/welcome_enter_your_password_to_continue"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_22" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:background="@drawable/black_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter your password"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/xxhdpi_10"
+                        android:textAlignment="viewStart" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_forgot_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="@string/forgot_password"
+                android:textColor="@color/green"
+                android:textSize="@dimen/t_xxh_22" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_password"
+            android:layout_margin="@dimen/xxhdpi_20"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="@string/enter_the_5_digit_code_sent_to_you_at"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_22" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_mob_otp_verify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="+91 9988776655"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_22" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="@string/did_you_enter_the_correct_mobile_number"
+                android:textColor="@color/green"
+                android:textSize="@dimen/t_xxh_22" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_20"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10">
+
+                    <EditText
+                        android:id="@+id/forgot_otp1_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/xxhdpi_50"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_border"
+                        android:cursorVisible="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_14" />
+
+                    <EditText
+                        android:id="@+id/forgot_otp2_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/xxhdpi_50"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_border"
+                        android:cursorVisible="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_14" />
+
+                    <EditText
+                        android:id="@+id/forgot_otp3_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/xxhdpi_50"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_border"
+                        android:cursorVisible="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_14" />
+
+                    <EditText
+                        android:id="@+id/forgot_otp4_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/xxhdpi_50"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_border"
+                        android:cursorVisible="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_14" />
+
+                    <EditText
+                        android:id="@+id/forgot_otp5_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/xxhdpi_50"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/black_border"
+                        android:cursorVisible="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_14" />
+
+                    <!-- <EditText
+                         android:id="@+id/forgot_otp6_edt"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="5dp"
+                         android:layout_marginRight="5dp"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         android:inputType="number"
+                         android:maxLength="1"
+                         android:maxLines="1"
+                         android:textColor="@color/black"
+                         android:textSize="@dimen/t_xxh_14" />-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/resend_otp_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/xxhdpi_5"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="@string/resend_otp"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_18" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_demo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/xxhdpi_10"
+                    android:visibility="invisible"
+                    android:text="@string/note_for_demo_purpose_we_ve_pre_filled_the_otp"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_sign_up_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_password"
+            android:layout_margin="@dimen/xxhdpi_20"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="@string/what_s_your_email_address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_22" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:background="@drawable/black_border"
+                android:hint="name@example.com"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textAlignment="viewStart" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_sign_up_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_sign_up_email"
+            android:layout_margin="@dimen/xxhdpi_20"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:text="@string/create_your_account_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_22" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:background="@drawable/black_border"
+                android:paddingStart="@dimen/xxhdpi_10"
+                android:textAlignment="viewStart"
+                app:hintEnabled="false"
+                card_view:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_signup_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter your password"
+                    android:inputType="textPassword"
+                    android:textAlignment="viewStart" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/sourcesanspro_light"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_xxh_22" />
+
+    </RelativeLayout>
+
+</ScrollView>

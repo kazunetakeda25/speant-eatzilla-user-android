@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_up_img_black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/login_up_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/login_up_img" />
+
+        <TextView
+            android:id="@+id/login_skip_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:layout_marginEnd="@dimen/xxhdpi_5"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="Skip Login >>"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/login_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="@dimen/xxhdpi_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/card_relative"
+                android:layout_marginLeft="@dimen/xxhdpi_10"
+                android:layout_marginRight="@dimen/xxhdpi_10"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/sign_in_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:gravity="center"
+                    android:text="Sign in"
+                   style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/sign_up_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Sign up"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@color/lit_grey" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/card_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <include layout="@layout/login_linear_designs" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/login_social_linear"
+            android:layout_below="@id/login_linear"
+            android:layout_marginLeft="@dimen/xxhdpi_20"
+            android:layout_marginRight="@dimen/xxhdpi_20"
+            android:gravity="center">
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:fastScrollEnabled="true"
+                card_view:cardCornerRadius="3dp"
+                card_view:cardElevation="5dp"
+                card_view:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/submit_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/t_xxh_15"
+                    android:paddingBottom="@dimen/t_xxh_15"
+                    android:text="Sign In"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/t_xxh_18" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/login_social_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:layout_marginBottom="@dimen/xxhdpi_10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in Using:" />
+
+            <ImageView
+                android:id="@+id/social_googel_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xxhdpi_20"
+                android:layout_marginRight="@dimen/xxhdpi_20"
+                android:background="@drawable/circle_bor"
+                android:padding="@dimen/xxhdpi_10"
+                android:src="@drawable/ic_google" />
+
+            <ImageView
+                android:id="@+id/social_fb_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_bor"
+                android:padding="@dimen/xxhdpi_10"
+                android:src="@drawable/ic_fb_icon" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

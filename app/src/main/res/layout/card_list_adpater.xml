@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/lay_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+
+        <LinearLayout
+            android:id="@+id/lay_linear_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/xxhdpi_5"
+            android:background="@color/red">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_delete_white"
+                android:text="Delete"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_marginBottom="@dimen/xxhdpi_5"
+                android:layout_marginStart="@dimen/xxhdpi_10"
+                android:layout_marginEnd="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:textSize="@dimen/t_xxh_18" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:padding="@dimen/xxhdpi_10">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_card_num"
+                style="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:paddingStart="@dimen/xxhdpi_40"
+                android:text="XXXXXX "
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:tint="@color/black"
+                android:src="@drawable/ic_unknown" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chk_brand_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                app:drawableTint="@color/colorPrimary"
+                android:gravity="center_vertical" />
+
+        </RelativeLayout>
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</LinearLayout>

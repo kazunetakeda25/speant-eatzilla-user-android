@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/lit_grey"
+                android:padding="@dimen/xxhdpi_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coupon Code:"
+                        android:textColor="@color/colorAccent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="August5615"
+                        android:textSize="@dimen/t_xxh_16"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/xxhdpi_5"
+                        android:textColor="@color/colorAccent"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get 50% Off on first 3 Food Deliver"
+                    android:layout_marginTop="@dimen/xxhdpi_5"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_16"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_5"
+                    android:text="Use Coupon code: August5615 and get 50% off on first 3 food delivery"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/offer_detail_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/xxhdpi_10"
+                android:background="@color/white"/>
+
+            <Button
+                android:id="@+id/offer_got_it_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_rect_green_bor"
+                android:text="Ok, Got IT"
+                android:textSize="@dimen/t_xxh_16"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/xxhdpi_20"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

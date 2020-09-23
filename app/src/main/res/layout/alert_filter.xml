@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/apply_filter_txt"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+            <ImageView
+                android:id="@+id/filter_close_img"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_clear" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/xxhdpi_10"
+                android:layout_toEndOf="@+id/filter_close_img"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="FILTERS"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/filter_reset_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="Reset"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_16" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/xxhdpi_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="Restaurants with"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_16" />
+
+            <CheckBox
+                android:id="@+id/offers_filter_chk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:paddingTop="@dimen/xxhdpi_10"
+                android:paddingBottom="@dimen/xxhdpi_10"
+                android:text="Offers"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                app:buttonTint="@color/colorAccent" />
+
+            <CheckBox
+                android:id="@+id/veg_filter_chk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:paddingTop="@dimen/xxhdpi_10"
+                android:paddingBottom="@dimen/xxhdpi_10"
+                android:text="Pure Veg"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                app:buttonTint="@color/colorAccent" />
+
+        </LinearLayout>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_relative"
+            android:orientation="vertical"
+            android:padding="@dimen/xxhdpi_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="Select Cuisines"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_filter_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/apply_filter_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:gravity="center"
+        android:padding="@dimen/xxhdpi_10"
+        android:text="Apply Filter"
+        android:textColor="@color/white"
+        android:textSize="@dimen/t_xxh_18" />
+
+</RelativeLayout>

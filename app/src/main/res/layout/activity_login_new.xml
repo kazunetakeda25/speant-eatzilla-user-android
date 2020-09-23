@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context=".ui.LoginNewActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/splash_img">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/t_xxh_16"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:paddingTop="@dimen/xxhdpi_10"
+            android:paddingEnd="@dimen/xxhdpi_5"
+            android:paddingStart="@dimen/xxhdpi_10"
+            android:paddingBottom="@dimen/xxhdpi_10"
+            android:text="@string/skip_login"
+            android:textColor="@color/colorWhite" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@drawable/ic_logo" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxhdpi_200"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="@dimen/xxhdpi_20">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/use_your_boga_account_to_get_started"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_20"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:background="@drawable/black_border"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_showFlag="true"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textSize="14sp"
+                    card_view:ccp_defaultPhoneCode="91" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:layout_marginTop="@dimen/xxhdpi_5"
+                    android:layout_marginBottom="@dimen/xxhdpi_5"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/login_phone_num_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/xxhdpi_10"
+                    android:hint="@string/enter_mobile_number"
+                    android:focusable="false"
+                    android:background="@android:color/transparent"
+                    android:textAlignment="viewStart"
+                    android:inputType="number"
+                    android:maxLength="15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

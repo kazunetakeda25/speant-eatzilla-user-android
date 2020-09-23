@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/edtsearch_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_20"
+                    android:layout_marginLeft="@dimen/t_xxh_10"
+                    android:layout_marginRight="@dimen/t_xxh_10"
+                    android:background="@drawable/round_rect_bor"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/t_xxh_10"
+                    android:paddingRight="@dimen/t_xxh_10">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/t_xxh_16"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:layout_toStartOf="@+id/img_search"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:textColorHint="@color/grey"
+                        android:textColor="@color/black"
+                        android:hint="Search for Restaurants and Food" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search"
+                        android:layout_marginLeft="@dimen/xxhdpi_5"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_close_grey"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/xxhdpi_5"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtsearch_lay"
+                android:layout_marginBottom="@dimen/xxhdpi_5"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/titleTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabGravity="fill"
+                    app:tabMode="scrollable"
+                    app:tabIndicatorColor="@color/colorAccent"
+                    app:tabTextAppearance="@style/MyCustomTextAppearance"
+                    app:tabTextColor="@color/black" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_below="@id/titleTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+           <!-- <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />-->
+
+            <LinearLayout
+                android:id="@+id/lay_noresult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:layout_centerInParent="true">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_no_food"
+                    android:layout_marginBottom="@dimen/xxhdpi_30"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oops!"
+                    android:textSize="@dimen/t_xxh_20"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/xxhdpi_10"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10"
+                    android:layout_marginStart="@dimen/xxhdpi_30"
+                    android:layout_marginEnd="@dimen/xxhdpi_30"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textSize="@dimen/t_xxh_16"
+                    android:textAlignment="center"
+                    android:text="No results found.Try some other restaurant name"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+</FrameLayout>

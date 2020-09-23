@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#2dbc34</color>-->
+    <color name="colorPrimary">#E79528</color>
+    <color name="green">#E79528</color>
+    <color name="colorPrimaryDark">#E79528</color>
+    <color name="colorAccent">#E79528</color>
+
+    <!--<color name="colorShim">#85ffffff</color>-->
+    <color name="colorShim">#73ffffff</color>
+    <color name="transGreen">#b106940c</color>
+
+    <color name="main_color">#BCB9BD</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="trans_white">#3dffffff</color>
+    <color name="trans_black">#64000000</color>
+    <color name="lit_grey">#EEEEEE</color>
+    <color name="whitish_grey">#f4f0f0</color>
+    <color name="whitish_green">#b719870b</color>
+    <color name="v_lit_grey">#FAFAFA</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="pale_grey">#d1bcbc</color>
+    <color name="light_grey">#e2d7d7</color>
+    <color name="trans_grey">#bebaba</color>
+    <color name="dark_grey">#6b6565</color>
+    <color name="dim">#66000000</color>
+    <color name="shimmer_bg">#5ce7e0e0</color>
+
+    <color name="google_plus">#C62828</color>
+    <color name="facebook">#3949AB</color>
+    <color name="txt_color">#484848</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="dull_grey">#e1d4d4</color>
+    <color name="red">#C62828</color>
+    <color name="black">#000000</color>
+    <color name="trans_lght_black">#6B000000</color>
+
+    <color name="persian_green_primary">#0DAC8F</color>
+    <color name="persian_green_dark">#0A927A</color>
+    <color name="persian_green_accent">#0A927A</color>
+
+    <color name="transparant_black">#55000000</color>
+    <color name="pale_grey_dark">#e5e6ea</color>
+
+
+
+</resources>

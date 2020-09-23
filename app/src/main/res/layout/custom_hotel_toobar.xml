@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:layout_height="?attr/actionBarSize">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/xxhdpi_10"
+        android:layout_marginEnd="@dimen/xxhdpi_10"
+        android:padding="@dimen/xxhdpi_5"
+        android:src="@drawable/ic_arrow_left_white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_restaurant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_back"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textSize="@dimen/t_xxh_20"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

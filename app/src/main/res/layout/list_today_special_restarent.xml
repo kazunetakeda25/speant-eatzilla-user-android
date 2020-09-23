@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/xxhdpi_5"
+    android:background="@drawable/br_grey_border"
+    android:layout_margin="@dimen/xxhdpi_5">
+
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/resta_list_rel"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_dish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:background="@color/white"
+                android:src="@drawable/slide1" />
+
+            <com.like.LikeButton
+                android:id="@+id/hotel_like_img"
+                android:layout_width="@dimen/xxhdpi_40"
+                android:layout_height="@dimen/xxhdpi_40"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:visibility="gone"
+                android:background="@drawable/round_shadow"
+                app:circle_end_color="@color/colorAccent"
+                app:circle_start_color="@color/colorPrimary"
+                app:dots_primary_color="@color/colorAccent"
+                app:dots_secondary_color="@color/colorPrimary"
+                app:icon_size="15dp"
+                app:icon_type="heart"
+                app:like_drawable="@drawable/ic_like"
+                app:unlike_drawable="@drawable/ic_unlike" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resta_list_rel"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:visibility="invisible"
+                android:background="@color/lit_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+
+                <LinearLayout
+                    android:id="@+id/hotel_detail_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txt_dish_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="The Punjab Express"
+                        android:minLines="5"
+                        android:textColor="@color/txt_color"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/t_xxh_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/br_grey_border"
+    android:layout_margin="@dimen/xxhdpi_5"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    app:ignore="NamespaceTypo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/xxhdpi_5"
+            android:layout_margin="@dimen/xxhdpi_5"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/hotel_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/xxhdpi_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/hotel_detail_rating_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/xxhdpi_10"
+                            android:background="@drawable/round_rect"
+                            android:drawableStart="@drawable/ic_star"
+                            android:drawablePadding="@dimen/xxhdpi_5"
+                            android:paddingLeft="@dimen/xxhdpi_5"
+                            android:paddingTop="3dp"
+                            android:paddingRight="@dimen/xxhdpi_5"
+                            android:paddingBottom="3dp"
+                            android:text="3.5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/t_xxh_12" />
+
+                        <LinearLayout
+                            android:id="@+id/hotel_detail_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@+id/hotel_detail_rating_txt"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/hotel_detail_hotel_name_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sourcesanspro_regular"
+                                android:text="The Punjab Express"
+                                android:textColor="@color/txt_color"
+                                android:textSize="@dimen/t_xxh_18" />
+
+                            <TextView
+                                android:id="@+id/hotel_detail_hotel_type_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/xxhdpi_5"
+                                android:text="North Indian • South Indian"
+                                android:textSize="@dimen/t_xxh_14" />
+
+                            <TextView
+                                android:id="@+id/hotel_detail_hotel_discount_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/xxhdpi_5"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/t_xxh_10" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_credit_offer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/tag"
+                                android:fontFamily="@font/sourcesanspro_regular"
+                                android:gravity="center_vertical"
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/xxhdpi_5"
+                                android:layout_marginBottom="@dimen/xxhdpi_5"
+                                android:text="Credit offer Available"
+                                android:drawablePadding="@dimen/xxhdpi_5"
+                                android:textColor="@color/black" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/hotel_detail_linear"
+                            android:layout_marginBottom="@dimen/xxhdpi_5"
+                            android:background="@color/grey" />
+
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/hotel_detail_time_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:textColor="@color/txt_color"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/t_xxh_12" />
+
+                        <TextView
+                            android:id="@+id/hotel_detail_amt_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:textColor="@color/txt_color"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/t_xxh_12" />
+
+                        <com.like.LikeButton
+                            android:id="@+id/hotel_like_img"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/xxhdpi_20"
+                            android:layout_weight="1"
+                            app:circle_end_color="@color/colorAccent"
+                            app:circle_start_color="@color/colorPrimary"
+                            app:dots_primary_color="@color/colorAccent"
+                            app:dots_secondary_color="@color/colorPrimary"
+                            app:icon_size="15dp"
+                            app:icon_type="heart"
+                            app:like_drawable="@drawable/ic_like"
+                            app:unlike_drawable="@drawable/ic_unlike"
+                            card_view:circle_end_color="@color/colorPrimary"
+                            card_view:circle_start_color="@color/colorPrimary"
+                            card_view:dots_primary_color="@color/colorPrimary"
+                            card_view:dots_secondary_color="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

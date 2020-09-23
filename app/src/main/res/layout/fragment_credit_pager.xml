@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.speant.user.Common.customCarosuel.CarouselLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    app:elevation="@dimen/xxhdpi_20"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/pagerImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_credit" />
+
+    <TextView
+        android:id="@+id/text_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/xxhdpi_10"/>
+
+    <TextView
+        android:id="@+id/text_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_credit"
+        android:paddingTop="@dimen/xxhdpi_10"
+        android:paddingBottom="@dimen/xxhdpi_10"
+        android:paddingStart="@dimen/xxhdpi_20"
+        android:paddingEnd="@dimen/xxhdpi_20"
+        android:background="@drawable/border_grey"/>
+
+</com.speant.user.Common.customCarosuel.CarouselLinearLayout
+   >

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_lay"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/xxhdpi_20"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/select_delivery_type"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                android:textSize="@dimen/t_xxh_20" />
+
+            <RadioGroup
+                android:id="@+id/rad_grp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rad_door"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:paddingStart="@dimen/xxhdpi_10"
+                    android:text="@string/door_delivery"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:textColor="@color/black"
+                    app:buttonTint="@color/black"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rad_pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:paddingStart="@dimen/xxhdpi_10"
+                    android:text="@string/restaurant_pickup"
+                    android:textSize="@dimen/t_xxh_18"
+                    app:buttonTint="@color/black"
+                    android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rad_dine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:paddingStart="@dimen/xxhdpi_10"
+                    android:text="@string/dine_booking"
+                    android:textSize="@dimen/t_xxh_18"
+                    app:buttonTint="@color/black"
+                    android:textColor="@color/black"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/lay_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rad_grp"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layinp_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:layout_weight=".5"
+                    android:hint="@string/select_time">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:focusable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layinp_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:layout_weight=".5"
+                    android:hint="@string/members">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="2" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/what_day"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/day_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/xxhdpi_10"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/how_many_people"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/total_member_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_10"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/what_time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/time_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/btn_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/xxhdpi_20"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:gravity="center"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="@string/cancel"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/t_xxh_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/t_xxh_18" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/xxhdpi_10"
+    android:paddingBottom="@dimen/xxhdpi_10"
+    android:layout_marginTop="@dimen/xxhdpi_5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_agmark"
+            android:layout_width="@dimen/xxhdpi_20"
+            android:layout_height="@dimen/xxhdpi_20"
+            android:text="BBQ Chicken Wings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_xxh_15"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/xxhdpi_10"
+            android:drawablePadding="@dimen/xxhdpi_10"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BBQ Chicken Wings"
+            android:layout_toRightOf="@id/item_agmark"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_xxh_15"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/xxhdpi_10"
+            android:drawablePadding="@dimen/xxhdpi_10"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/t_xxh_15"
+            android:minWidth="@dimen/xxhdpi_50"
+            android:gravity="end"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_addon_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/t_xxh_12"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:layout_marginTop="@dimen/xxhdpi_5"
+        android:layout_marginStart="@dimen/xxhdpi_10"/>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Splash Screen-->
+
+    <dimen name="xxhdpi_225">225dp</dimen>
+    <dimen name="xxhdpi_200">190dp</dimen>
+    <dimen name="xxhdpi_175">170dp</dimen>
+    <dimen name="xxhdpi_150">145dp</dimen>
+    <dimen name="xxhdpi_125">120dp</dimen>
+    <dimen name="xxhdpi_100">90dp</dimen>
+    <dimen name="xxhdpi_75">75dp</dimen>
+    <dimen name="xxhdpi_50">50dp</dimen>
+    <dimen name="xxhdpi_30">28dp</dimen>
+    <dimen name="xxhdpi_20">20dp</dimen>
+    <dimen name="xxhdpi_10">10dp</dimen>
+
+    <!--Text size-->
+    <dimen name="t_xxh_12">12sp</dimen>
+    <dimen name="t_xxh_14">14sp</dimen>
+    <dimen name="t_xxh_16">16sp</dimen>
+    <dimen name="t_xxh_18">18sp</dimen>
+    <dimen name="t_xxh_20">20sp</dimen>
+    <dimen name="t_xxh_22">22sp</dimen>
+    <dimen name="t_xxh_24">24sp</dimen>
+    <dimen name="t_xxh_26">26sp</dimen>
+    <dimen name="t_xxh_28">28sp</dimen>
+    <dimen name="t_xxh_30">30sp</dimen>
+    <dimen name="t_xxh_8">8sp</dimen>
+    <dimen name="xxhdpi_5">5dp</dimen>
+    <dimen name="t_xxh_10">10sp</dimen>
+    <dimen name="xxhdpi_40">40dp</dimen>
+    <dimen name="xxhdpi_235">235dp</dimen>
+    <dimen name="xxhdpi_245">245dp</dimen>
+    <dimen name="xxhdpi_300">300dp</dimen>
+    <dimen name="t_xxh_15">15sp</dimen>
+</resources>

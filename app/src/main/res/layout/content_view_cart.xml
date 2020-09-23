@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/xxhdpi_10"
+    android:paddingRight="@dimen/xxhdpi_10"
+    android:paddingBottom="@dimen/xxhdpi_10">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_5">
+
+                <ImageView
+                    android:id="@+id/cart_hotel_img"
+                    android:layout_width="@dimen/xxhdpi_100"
+                    android:layout_height="@dimen/xxhdpi_100"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/xxhdpi_10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/xxhdpi_10"
+                    android:layout_toRightOf="@id/cart_hotel_img"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cart_hotel_name_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:maxLines="1"
+                        android:text="The Punjab Express"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/t_xxh_18" />
+
+                    <TextView
+                        android:id="@+id/cart_hotel_place_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xxhdpi_5"
+                        android:text="R.S Puram"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/t_xxh_15" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/xxhdpi_10"
+                        android:text="Estimate Delivery Time"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/cart_hotel_delivery_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="30 - 45 min"
+                        android:textColor="@color/green" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!-- <Space
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/xxhdpi_10" />
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/grey" />-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+            <RelativeLayout
+                android:id="@+id/lay_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/cart_address_change_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Change"
+                    android:textColor="@color/green" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/cart_address_change_txt"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/xxhdpi_10"
+                        android:text="Delivering Food to"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/t_xxh_18" />
+
+                    <TextView
+                        android:id="@+id/cart_address_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fetching_adddress"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:id="@+id/txt_not_deliverable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:maxLines="1"
+                        android:text="Not deliverable to this location"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/t_xxh_15"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/select_delivery_type"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_18"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+            <RadioGroup
+                android:id="@+id/rad_grp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rad_door"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_5"
+                    android:paddingStart="@dimen/xxhdpi_10"
+                    android:text="@string/door_delivery"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorAccent" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rad_pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_5"
+                    android:paddingStart="@dimen/xxhdpi_10"
+                    android:text="@string/restaurant_pickup"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorAccent" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/rad_dine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/xxhdpi_5"
+                    android:paddingStart="@dimen/xxhdpi_10"
+                    android:text="@string/dine_booking"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorAccent" />
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_20" />
+
+            <LinearLayout
+                android:id="@+id/lay_coup_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:layout_marginBottom="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/cart_cupon_code_aply_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Apply"
+                    android:textColor="@color/green" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/apply_code_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/cart_cupon_code_aply_txt"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/ic_percent"
+                    android:drawablePadding="@dimen/xxhdpi_10"
+                    android:hint="Apply Coupon Code"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cart_food_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:layout_marginBottom="@dimen/xxhdpi_10" />
+
+
+            <!--  <Space
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/xxhdpi_10" />
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/grey" />-->
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/txt_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:layout_marginTop="@dimen/xxhdpi_10"
+                    android:layout_marginBottom="@dimen/xxhdpi_10"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/xxhdpi_10"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Restaurant Bill"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/t_xxh_18" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10">
+
+                    <TextView
+                        android:id="@+id/item_total_amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=" 00.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/item_total_amount_txt"
+                        android:text="Item Total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10">
+
+                    <TextView
+                        android:id="@+id/item_total_discount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="00.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/item_total_discount_txt"
+                        android:text="Total Discount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10">
+
+                    <TextView
+                        android:id="@+id/offer_discount_amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="-  00.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/offer_discount_amount_txt"
+                        android:text="Offer Discount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_packaging"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10">
+
+                    <TextView
+                        android:id="@+id/packaging_charge_amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=" 00.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/packaging_charge_amount_txt"
+                        android:text="Restaurant Packaging Charge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10">
+
+                    <TextView
+                        android:id="@+id/gst_amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=" 00.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/gst_amount_txt"
+                        android:text="GST"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_10">
+
+                    <TextView
+                        android:id="@+id/delivery_charge_amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=" 00.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/delivery_charge_amount_txt"
+                        android:text="Delivery Charge"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                </RelativeLayout>
+
+                <!-- <View
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_marginBottom="@dimen/xxhdpi_10"
+                     android:layout_marginTop="@dimen/xxhdpi_10"
+                     android:background="@color/lit_grey" />-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="@dimen/xxhdpi_10">
+
+                    <TextView
+                        android:id="@+id/total_to_pay_amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text=" 00.00"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/t_xxh_18" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/total_to_pay_amount_txt"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="To Pay"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/t_xxh_18" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!-- <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:layout_marginBottom="@dimen/xxhdpi_10"
+                 android:layout_marginTop="@dimen/xxhdpi_10"
+                 android:background="@color/lit_grey" />-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/xxhdpi_5"
+                android:fastScrollEnabled="true"
+                card_view:cardCornerRadius="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/place_order_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:gravity="center"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Place Order"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/t_xxh_18" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

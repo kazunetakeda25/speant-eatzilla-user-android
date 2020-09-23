@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    android:orientation="vertical"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="@dimen/xxhdpi_10">
+
+    <!--android:background="@drawable/banner_bg"-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <!--android:background="@drawable/banner_bg"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <!--android:background="@drawable/tag_bg"-->
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/home_slide_head_txt"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="@dimen/t_xxh_14"
+           android:singleLine="true"
+           android:ellipsize="marquee"
+           android:textColor="@color/black"
+           android:padding="2dp"
+           android:layout_margin="2dp"
+          android:fontFamily="@font/quicksand_bold"/>
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/home_slide_desc_txt"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="@dimen/t_xxh_12"
+           android:layout_marginTop="2dp"
+           android:textColor="@color/black"
+           android:maxLines="1"
+           android:ellipsize="end"
+           android:padding="2dp"
+           android:layout_margin="2dp"
+           android:fontFamily="@font/quicksand_regular"/>
+
+    </LinearLayout>
+
+</FrameLayout>

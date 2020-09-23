@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_pin"
+            android:layout_width="@dimen/xxhdpi_20"
+            android:layout_height="@dimen/xxhdpi_20"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/xxhdpi_10"
+            android:layout_marginStart="@dimen/xxhdpi_10"
+            android:src="@drawable/ic_loc_pin" />
+
+        <LinearLayout
+            android:id="@+id/place_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_pin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/loc_head_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:maxLines="1"
+                android:padding="@dimen/xxhdpi_5"
+                android:text="qeqewqwqwqweqdadasdsasdasdadasdasdasdassdsadasd"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_12"/>
+
+            <TextView
+                android:id="@+id/loc_addr_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="chennai"
+                android:textColor="@color/black"
+                android:paddingStart="@dimen/xxhdpi_5"
+                android:paddingEnd="@dimen/xxhdpi_5"
+                android:paddingBottom="@dimen/xxhdpi_5"
+                android:textSize="@dimen/t_xxh_12"/>
+
+            <View
+                android:id="@+id/loc_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

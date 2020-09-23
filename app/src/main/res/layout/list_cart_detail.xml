@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/br_grey_border"
+    android:padding="10dp"
+    android:layout_margin="@dimen/xxhdpi_10">
+
+    <ImageView
+        android:id="@+id/list_cart_hotel_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/xxhdpi_10"
+        android:layout_toEndOf="@id/list_cart_hotel_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/list_cart_hotel_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="The Punjab Express"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/t_xxh_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/list_cart_hotel_loc_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:text="R.S Puram"
+            android:textSize="@dimen/t_xxh_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:layout_marginBottom="@dimen/xxhdpi_10"
+            android:background="@color/grey" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item:"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <TextView
+                    android:id="@+id/list_cart_items_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 x Panner items"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_12"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:layout_marginTop="@dimen/xxhdpi_5"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lay_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order On :"
+                    android:layout_marginTop="@dimen/xxhdpi_10"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <TextView
+                    android:id="@+id/order_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01 Aug"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_12"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:layout_marginTop="@dimen/xxhdpi_5"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount :"
+                    android:layout_marginTop="@dimen/xxhdpi_10"
+                    android:textSize="@dimen/t_xxh_14" />
+
+                <TextView
+                    android:id="@+id/list_cart_total_amt_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1500"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/t_xxh_12"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:layout_marginTop="@dimen/xxhdpi_5"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="@dimen/t_xxh_12"
+                 android:text="Total :"/>
+             <TextView
+                 android:id="@+id/list_cart_total_amt_txt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="@dimen/t_xxh_12"
+                 android:text=" $500"
+                 android:textColor="@color/txt_color"
+                 android:textStyle="bold"/>-->
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t_xxh_12"
+                android:layout_marginLeft="@dimen/xxhdpi_5"
+                android:text="Item :"/>
+            <TextView
+                android:id="@+id/list_cart_items_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t_xxh_12"
+                android:text=" Briyani, Cured Ri...."
+                android:singleLine="true"
+                android:textColor="@color/txt_color"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

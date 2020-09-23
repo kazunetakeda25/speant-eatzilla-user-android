@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.OffersActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarStyle"
+        app:subtitleTextColor="@color/black"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/ToolbarTitle"
+        app:titleTextColor="@color/black" />
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:id="@+id/offers_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_demo_child_count="2"
+        app:shimmer_demo_layout="@layout/demo_near_rest_recycler"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        app:shimmer_demo_angle="20"
+        android:layout_marginStart="@dimen/xxhdpi_5"
+        android:layout_marginEnd="@dimen/xxhdpi_5"/>
+
+
+</LinearLayout>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/xxhdpi_10"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        app:theme="@style/Toolbar2Theme"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/xxhdpi_10"
+        android:paddingStart="@dimen/xxhdpi_10"
+        android:layout_marginTop="@dimen/xxhdpi_10"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_5">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/hotel_img"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/xxhdpi_100"
+                    android:layout_height="@dimen/xxhdpi_100"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="@dimen/xxhdpi_10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/xxhdpi_10"
+                    android:layout_toEndOf="@id/hotel_img"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hotel_name_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Punjab Express"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/t_xxh_18"
+                        android:maxLines="1"
+                        android:fontFamily="@font/sourcesanspro_regular" />
+
+                    <TextView
+                        android:id="@+id/hotel_place_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xxhdpi_5"
+                        android:text="R.S Puram"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/t_xxh_15"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/xxhdpi_10"
+                        android:textColor="@color/black"
+                        android:text="Order Delivered On" />
+
+                    <TextView
+                        android:id="@+id/hotel_delivery_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="2dp"
+                        android:text="30 - 45 min"
+                        android:textColor="@color/green"
+                        android:fontFamily="@font/sourcesanspro_regular" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_20"
+                android:layout_marginBottom="@dimen/xxhdpi_10">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delivering Food to"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="@dimen/xxhdpi_5"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                    <TextView
+                        android:id="@+id/address_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/t_xxh_15" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:layout_marginBottom="@dimen/xxhdpi_10"/>
+
+
+            <!--  <Space
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/xxhdpi_10" />
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/grey" />-->
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Bill"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:textSize="@dimen/t_xxh_18"
+                android:textColor="@color/colorAccent"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/item_total_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$ 447.00"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/item_total_amount_txt"
+                    android:text="Item Total"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/item_total_discount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=" 447.00"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/t_xxh_15" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/item_total_discount_txt"
+                    android:text="Total Discount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_15" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/offer_discount_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="- $ 22.00"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/offer_discount_amount_txt"
+                    android:text="Offer Discount"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/packaging_charge_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$ 22.00"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/packaging_charge_amount_txt"
+                    android:text="Restaurant Packaging Charge"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/gst_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$ 22.00"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/gst_amount_txt"
+                    android:text="GST"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/delivery_charge_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$ 22.00"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/delivery_charge_amount_txt"
+                    android:text="Delivery Charge"
+                    android:textSize="@dimen/t_xxh_15"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_20" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/total_to_pay_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$ 22.00"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:fontFamily="@font/sourcesanspro_regular" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/total_to_pay_amount_txt"
+                    android:text="Paid Amount"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:fontFamily="@font/sourcesanspro_regular"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_20" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_cancelled"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:textSize="@dimen/t_xxh_20"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:background="@color/colorAccent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/repeat_order"
+                android:textAllCaps="false"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:textSize="@dimen/t_xxh_20"
+                android:visibility="gone"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:background="@color/colorPrimary"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxhdpi_20" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

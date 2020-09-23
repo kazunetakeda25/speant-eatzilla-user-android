@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/xxhdpi_10"
+    android:layout_width="100dp"
+    android:layout_height="70dp">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/chk_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/checkbox_selector"
+        android:textColor="@drawable/text_selector"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textSize="@dimen/t_xxh_14"
+        android:gravity="center"
+        android:button="@android:color/transparent"/>
+
+</LinearLayout>

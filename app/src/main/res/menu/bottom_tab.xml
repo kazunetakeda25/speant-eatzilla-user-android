@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/action_go"
+        android:icon="@drawable/shop2"
+        android:title="@string/go_out"/>
+
+    <!--<item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        android:visible="false"/>-->
+
+    <item
+        android:id="@+id/action_cart"
+        android:title="Cart"
+        android:icon="@drawable/ic_un_cart"/>
+
+    <item
+        android:id="@+id/action_credit"
+        android:icon="@drawable/dollar_sign"
+        android:title="Credit"/>
+
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_un_prof"
+        android:title="Profile"/>
+
+
+
+</menu>

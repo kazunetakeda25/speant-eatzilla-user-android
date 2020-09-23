@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/br_grey_border"
+    android:layout_margin="@dimen/xxhdpi_5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_rect_bor"
+        android:padding="@dimen/xxhdpi_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coupon Code:"
+                android:textColor="@color/colorAccent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="August5615"
+                android:textSize="@dimen/t_xxh_16"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/xxhdpi_5"
+                android:textColor="@color/colorAccent"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get 50% Off on first 3 Food Deliver"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/t_xxh_16"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:text="Use Coupon code: August5615 and get 50% off on first 3 food delivery"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More Details"
+            android:textSize="@dimen/t_xxh_12"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</LinearLayout>

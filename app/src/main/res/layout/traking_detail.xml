@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_margin="@dimen/xxhdpi_10">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/xxhdpi_10"
+        android:nestedScrollingEnabled="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_chat_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/xxhdpi_5"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="Chat with Admin"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_xxh_20"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/td_track_time_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:17"
+                    android:textColor="@color/black"
+                    android:textSize="44sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/td_track_time_session_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/xxhdpi_5"
+                    android:text="PM"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_20"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:gravity="end|bottom"
+                    android:paddingRight="@dimen/xxhdpi_5"
+                    android:paddingBottom="@dimen/xxhdpi_5"
+                    android:text="Estimated Arrival"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_14" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="@dimen/xxhdpi_5"
+                android:layout_marginRight="-5dp"
+                android:progressBackgroundTint="@color/grey"
+                android:progressTint="@color/colorAccent"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/td_food_prepared_txt"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="View Order Status"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_direction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:drawableEnd="@drawable/ic_track"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center_vertical"
+                android:text="@string/view_direction"
+                android:textColor="@color/black"
+                android:textSize="@dimen/t_xxh_20"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/td_time_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/lay_driv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_5"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/td_prof_img"
+                        android:layout_width="@dimen/xxhdpi_75"
+                        android:layout_height="@dimen/xxhdpi_75"
+                        android:src="@drawable/ic_user" />
+
+                    <ImageView
+                        android:id="@+id/td_verify_img"
+                        android:layout_width="@dimen/xxhdpi_20"
+                        android:layout_height="@dimen/xxhdpi_20"
+                        android:layout_alignEnd="@+id/td_prof_img"
+                        android:layout_alignBottom="@id/td_prof_img"
+                        android:src="@drawable/ic_tick_bg" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/td_track_desc_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="@dimen/xxhdpi_10"
+                        android:paddingRight="@dimen/xxhdpi_10"
+                        android:text="Praveen Kumar has arrived at rhe restarunt and will pick up your order soon"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:paddingLeft="@dimen/xxhdpi_10"
+                        android:paddingRight="@dimen/xxhdpi_10"
+                        android:text="Chat with DeliveryBoy"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:background="@color/grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="Restaurant Bill"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/t_xxh_16" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/td_item_total_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$ 447.00"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Item Total"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/item_total_discount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=" 447.00"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/t_xxh_15" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/item_total_discount_txt"
+                    android:text="Total Discount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_xxh_15" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/td_offer_discount_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="- $ 22.00"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Offer Discount"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/packaging_charge_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="- $ 22.00"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/packaging_charge_amount_txt"
+                    android:text="Restaurant Packaging Charge"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/td_gst_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="- $ 22.00"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GST"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxhdpi_10">
+
+                <TextView
+                    android:id="@+id/delivery_charge_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="- $ 22.00"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/delivery_charge_amount_txt"
+                    android:text="Delivery Charge"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/total_to_pay_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:text="$ 22.00"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/t_xxh_18" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/total_to_pay_amount_txt"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:text="To Pay"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/t_xxh_18" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="@dimen/xxhdpi_10"
+                android:layout_marginBottom="@dimen/xxhdpi_10"
+                android:background="@color/grey" />
+
+            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:fastScrollEnabled="true"
+                card_view:cardCornerRadius="5dp">
+
+                <TextView
+                    android:id="@+id/td_cancel_order_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/green"
+                    android:gravity="center"
+                    android:padding="@dimen/xxhdpi_10"
+                    android:text="Cancel Order"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/t_xxh_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

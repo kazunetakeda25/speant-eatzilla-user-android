@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/lit_grey"
+        android:padding="@dimen/xxhdpi_20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_coup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sourcesanspro_light"
+                android:lineSpacingExtra="13sp"
+                android:paddingEnd="@dimen/xxhdpi_10"
+                android:text="Coupon Code :"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_coup_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_coup"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:lineSpacingExtra="13sp"
+                android:text="AUGUST50"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/xxhdpi_30" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_coup_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:ellipsize="end"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:maxLines="1"
+            android:layout_marginBottom="@dimen/xxhdpi_10"
+            android:text="@string/coup_tit"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_xxh_14" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_coup_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/sourcesanspro_light"
+            android:layout_marginBottom="@dimen/xxhdpi_10"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/coup_desc_dum"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/t_xxh_14" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_rules"
+        android:layout_width="match_parent"
+        android:lineSpacingExtra="@dimen/t_xxh_10"
+        android:padding="@dimen/xxhdpi_20"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnn_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_bg_rect"
+        android:layout_margin="@dimen/xxhdpi_20"
+        android:text="@string/ok_got_it"
+        android:textAllCaps="false"
+        android:textSize="@dimen/t_xxh_18"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/sourcesanspro_semibold"/>
+
+</LinearLayout>

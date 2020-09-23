@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/xxhdpi_10"
+    android:paddingBottom="@dimen/xxhdpi_10"
+    android:layout_marginTop="@dimen/xxhdpi_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/add_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/list_cart_item_amt"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/item_qty_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/round_rect_bor"
+                android:padding="@dimen/xxhdpi_5"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/item_qty_minus_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/xxhdpi_5"
+                    android:paddingEnd="@dimen/xxhdpi_5"
+                    android:layout_marginLeft="@dimen/xxhdpi_5"
+                    android:src="@drawable/ic_minus"/>
+
+                <TextView
+                    android:id="@+id/item_qty_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:minWidth="@dimen/xxhdpi_20"
+                    android:textSize="@dimen/t_xxh_18"/>
+
+                <ImageView
+                    android:id="@+id/item_qty_plus_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/xxhdpi_5"
+                    android:paddingEnd="@dimen/xxhdpi_5"
+                    android:layout_marginRight="@dimen/xxhdpi_5"
+                    android:src="@drawable/ic_plus"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BBQ Chicken Wings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_xxh_15"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/xxhdpi_10"
+            android:layout_toLeftOf="@id/add_linear"
+            android:drawableLeft="@drawable/ic_red_agmark"
+            android:drawablePadding="@dimen/xxhdpi_10"/>
+
+        <TextView
+            android:id="@+id/list_cart_item_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/t_xxh_15"
+            android:minWidth="@dimen/xxhdpi_50"
+            android:gravity="end"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="@dimen/xxhdpi_10"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_addon_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/t_xxh_12"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:layout_marginStart="@dimen/xxhdpi_10"/>
+
+
+</LinearLayout>

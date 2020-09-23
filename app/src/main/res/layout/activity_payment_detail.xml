@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PaymentDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_payment"
+        android:layout_width="match_parent"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextAppearance="@style/ToolbarTitleTheme"
+        app:titleTextColor="@color/black"
+        android:layout_height="?android:attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar_payment"
+        android:padding="@dimen/xxhdpi_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_payment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/t_xxh_18" />
+
+        <RadioGroup
+            android:id="@+id/rad_grup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/cash_on_delivery_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:padding="@dimen/xxhdpi_10"
+                android:button="@drawable/payment_radio"
+                android:checked="true"
+                android:drawableStart="@drawable/ic_cash"
+                android:drawablePadding="@dimen/xxhdpi_10"
+                android:textColor="@color/black"
+                android:text="@string/cash_on_delivery"
+                android:textSize="@dimen/t_xxh_18" />
+
+            <RadioButton
+                android:id="@+id/card_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/xxhdpi_10"
+                android:padding="@dimen/xxhdpi_10"
+                android:visibility="visible"
+                android:button="@drawable/payment_radio"
+                android:drawableStart="@drawable/ic_cash"
+                android:textColor="@color/black"
+                android:drawablePadding="@dimen/xxhdpi_10"
+                android:text="@string/pay_by_card"
+                android:textSize="@dimen/t_xxh_18"  />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/payment_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/xxhdpi_5"
+        android:text="@string/pay"
+        android:textColor="@color/white"
+        android:textSize="@dimen/t_xxh_20"
+        android:layout_margin="@dimen/xxhdpi_20"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

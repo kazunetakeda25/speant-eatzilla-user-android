@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/xxhdpi_5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxhdpi_20">
+
+        <ImageView
+            android:id="@+id/help_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginLeft="@dimen/xxhdpi_10"
+            android:paddingTop="@dimen/xxhdpi_10"
+            android:paddingLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Help and Support"
+            android:textSize="@dimen/xxhdpi_20"
+            android:textColor="@color/txt_color"
+            android:layout_marginLeft="@dimen/xxhdpi_10"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxhdpi_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_rect_bor"
+        android:layout_margin="@dimen/xxhdpi_10"
+        android:padding="@dimen/xxhdpi_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I Haven't recevied this Order"
+            android:textSize="@dimen/t_xxh_16"
+            android:textColor="@color/txt_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/xxhdpi_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Id #14405765567"
+                android:textSize="@dimen/t_xxh_12"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:layout_marginLeft="@dimen/xxhdpi_5"
+                android:layout_marginRight="@dimen/xxhdpi_5"
+                android:layout_marginTop="3dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auguest 1, 4:25"
+                android:textSize="@dimen/t_xxh_12"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_5"
+            android:text="1 New Message"
+            android:textColor="@color/txt_color"
+            android:drawableLeft="@drawable/ic_msg"
+            android:drawablePadding="@dimen/xxhdpi_10"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/xxhdpi_5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="I Haven't recevied this Order"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/txt_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="Items are missing from my order"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/txt_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="Items are different from what i orderd"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/txt_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="I have Recevied bad quality food"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/txt_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/xxhdpi_10"
+            android:text="I have payment &amp; refund related queries
+for this order"
+            android:textSize="@dimen/t_xxh_18"
+            android:textColor="@color/txt_color"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

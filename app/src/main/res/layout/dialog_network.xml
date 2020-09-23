@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/lay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:text="Check Your Network Connection!"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="OK"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/t_xxh_18"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>
