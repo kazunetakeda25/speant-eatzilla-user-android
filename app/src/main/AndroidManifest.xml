@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.speant.user">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.speant.user.Common.app.App"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="usesCleartextTraffic,android:allowBackup">
+
+        <activity
+            android:name=".ui.InboxActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.speant.user.ui.DiningTrackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.LoginConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.speant.user.ui.LoginNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.CardListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Coloured" />
+        <activity
+            android:name="com.speant.user.ui.AddCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Coloured" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.speant.user.ui.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+            <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="c97a58317aeb945290988095482d5704ee020c22" />
+        -->
+        <activity
+            android:name="com.speant.user.ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.speant.user.ui.OnBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.LoginActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.speant.user.ui.ForgotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.speant.user.ui.AddAddressActivity"
+            android:label=""
+            android:parentActivityName="com.speant.user.ui.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <receiver android:name="com.speant.user.Common.BroadCastReceivers.MySMSBroadCastReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.speant.user.ui.HotelDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Coloured" />
+        <activity
+            android:name="com.speant.user.ui.HotelItemsDetailActivity"
+            android:parentActivityName="com.speant.user.ui.HotelDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.ViewCartActivity"
+            android:label="Your Cart"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Coloured"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.speant.user.ui.PaymentDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Coloured" />
+        <!--
+       <service android:name=".Common.Fcm">
+           <intent-filter>
+               <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+           </intent-filter>
+       </service>
+        -->
+        <service
+            android:name="com.speant.user.Common.Fcm"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.speant.user.ui.OldLoginActivity"
+            android:label="@string/title_activity_old_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.speant.user.ui.TrackingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Coloured" />
+        <activity
+            android:name="com.speant.user.ui.HistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.FaqActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.HelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.AddPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.FavouritesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.CompletedOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.RechargeWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.speant.user.ui.OffersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7531d966f805c893c0d36bbf7b0509ed0f7d1e00" />
+    </application>
+
+</manifest>

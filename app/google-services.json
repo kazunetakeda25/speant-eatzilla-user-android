@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "94042465991",
+    "firebase_url": "https://speanteatzilla-72242.firebaseio.com",
+    "project_id": "speanteatzilla-72242",
+    "storage_bucket": "speanteatzilla-72242.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94042465991:android:c4625fd0ad89373e",
+        "android_client_info": {
+          "package_name": "com.speant.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94042465991-tgvsmdtdj1uuh726n6vqlp5cln5f19t3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYGarwIcVlcdiYuRioZuffuEuRd5n4L1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94042465991-tgvsmdtdj1uuh726n6vqlp5cln5f19t3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
